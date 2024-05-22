@@ -1,4 +1,4 @@
-import { Button, Image, Text, View, Pressable, TextInput } from 'react-native'
+import { Button, Image, Text, View, Pressable, TextInput, TouchableOpacity } from 'react-native'
 import styles from './style'
 import { useState } from 'react'
 
@@ -38,8 +38,10 @@ export default function Reg({ navigation }) {
 			<TextInput style={styles.inp} onChangeText={(vall) => addVall(vall, 'email')} placeholder='Email' />
 			<Text>We will email you trip confirmations and receipts.</Text>
 			<TextInput style={styles.inp} onChangeText={(vall) => addVall(vall, 'password')} placeholder='Password' secureTextEntry={true} />
-			<Text>Don’t have an account ?<Text onPress={() => navigation.navigate('Sign in')}>Sign Up</Text> </Text>
-			<Button title='Login' onPress={checkInps} />
+			<View style={styles.blocFooter}>
+				<Text style={styles.textFooter}>Don’t have an account ?<Text onPress={() => navigation.navigate('Sign in')}> Sign In</Text> </Text>
+				<TouchableOpacity style={styles.btn} onPress={checkInps}>Agree and continue</TouchableOpacity>
+			</View>
 		</View>
 	)
 }

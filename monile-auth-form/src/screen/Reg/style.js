@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
 	container: {
+		marginTop: 20,
 		width: '100%',
 		height: '100%',
 		backgroundColor: '#F0F4F3',
@@ -14,6 +15,25 @@ const styles = StyleSheet.create({
 		width: '80%',
 		paddingHorizontal: 16,
 		paddingVertical: 16
+	},
+	btn: {
+		backgroundColor: '#7E49FF',
+		width: '90%',
+		paddingVertical: 16,
+		textAlign: 'center',
+		borderRadius: 8,
+		color: 'white'
+	},
+	blocFooter: {
+		width: '100%',
+		alignItems: 'center',
+		marginTop: 300,
+		gap: 10
+	},
+	textFooter: {
+		fontWeight: '700',
+		fontSize: 14,
+		color: '#7E49FF'
 	}
 })
 export default styles

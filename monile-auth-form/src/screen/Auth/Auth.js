@@ -1,5 +1,5 @@
 
-import { Button, Image, Text, View, Pressable, TextInput } from 'react-native'
+import { Button, Image, Text, View, Pressable, TextInput, TouchableOpacity } from 'react-native'
 import styles from './style'
 import { useState } from 'react'
 
@@ -26,12 +26,13 @@ export default function Auth({ navigation }) {
 			console.log(error.message);
 		}
 	}
+
 	return (
 		<View style={styles.container}>
 			<TextInput style={styles.inp} onChangeText={(vall) => addVall(vall, 'email')} placeholder='Email' />
 			<TextInput style={styles.inp} onChangeText={(vall) => addVall(vall, 'password')} placeholder='Password' secureTextEntry={true} />
-			<Text>Don’t have an account ?<Text onPress={() => navigation.navigate('Sign up')}>Sign Up</Text> </Text>
-			<Button title='Login' onPress={checkInps} />
+			<Text style={styles.textFooter}>Don’t have an account ?<Text onPress={() => navigation.navigate('Sign up')}> Sign Up</Text> </Text>
+			<TouchableOpacity style={styles.btn} onPress={checkInps}>Login</TouchableOpacity>
 		</View>
 	)
 }

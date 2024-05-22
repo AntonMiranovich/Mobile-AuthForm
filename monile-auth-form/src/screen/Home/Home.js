@@ -1,10 +1,10 @@
-import { Button, Image, Text, View, Pressable } from 'react-native'
+import { Button, Image, Text, View, Pressable,TouchableOpacity } from 'react-native'
 import styles from './style'
 
 export default function Home({ navigation }) {
     return (
         <View style={styles.container}>
-            <Button title='Get started' onPress={() => navigation.navigate('Sign in')} />
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Sign in')}>Get started</TouchableOpacity>
         </View>
     )
 }
